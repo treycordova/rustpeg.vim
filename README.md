@@ -2,7 +2,7 @@
 #### A simple syntax highlighter vim plugin for `.rustpeg` files.
 **Important dependency** on [rust-lang/rust.vim][rv], or any [Rust][r] plugin, really.
 
-### Installation
+## Installation
 #### Using [Vundle][v]
 
 1. Add `Plugin 'treycordova/rustpeg.vim'` to `~/.vimrc`
