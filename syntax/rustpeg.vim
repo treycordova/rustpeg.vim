@@ -18,8 +18,8 @@ syn match matchers "[.*+?&!]" contained
 syn match binding "\w\+:"he=e-1 contained
 syn match zeroOrMore "[*]\{2}" contained
 syn match oneOrMore "[+]\{2}" contained
-syn region characterSet start="\[" end="\]" contains=not contained
-syn region literal start="\"" end="\"" contained
+syn region characterSet start=+\[+ skip=+\\\\\|\\\]+ end=+\]+ contains=not contained
+syn region literal start=+"+ skip=+\\\\\|\\"+ end=+"+ contained
 syn region definition start="\s*=" end="$" contains=characterSet,binding,zeroOrMore,oneOrMore,matchers,literal
 syn region leadingOr start="\s*/[^/]" end="$" contains=characterSet,binding,zeroOrMore,oneOrMore,matchers,literal
 syn region rust start="{?\=" end="}" contains=@rust
