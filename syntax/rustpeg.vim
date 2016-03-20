@@ -22,7 +22,7 @@ syn region characterSet start=+\[+ skip=+\\\\\|\\\]+ end=+\]+ contains=not conta
 syn region literal start=+"+ skip=+\\\\\|\\"+ end=+"+ contained
 syn region definition start="\s*=" end="$" contains=characterSet,binding,zeroOrMore,oneOrMore,matchers,literal
 syn region leadingOr start="\s*/[^/]" end="$" contains=characterSet,binding,zeroOrMore,oneOrMore,matchers,literal
-syn region rust start="{?\=" end="}" contains=@rust
+syn region rust start="[^:]{?\=" end="}" contains=@rust
 
 hi def link literal String
 hi def link characterSet Delimiter
